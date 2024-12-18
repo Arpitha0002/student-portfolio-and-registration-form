@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking System</title>
+    <link rel="stylesheet" href="stylet.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Travel Booking Form</h1>
+
+        <!-- Travel Booking Form -->
+        <form id="bookingForm" action="confirm.html" method="get">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" required>
+
+
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" required>
+
+            <label for="travelDate">Travel Date:</label>
+            <input type="date" id="travelDate" name="travelDate" required>
+
+            <label for="numTravelers">Number of Travelers:</label>
+            <input type="number" id="numTravelers" name="numTravelers" required>
+
+            <label for="specialRequests">Special Requests/Additional Info:</label>
+            <textarea id="specialRequests" name="specialRequests"></textarea>
+
+            <button type="submit">Book Trip</button>
+        </form>
+    </div>
+
+</body>
+</html>

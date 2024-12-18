@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="stylet.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Booking Confirmation</h1>
+
+        <div id="output" class="output"></div>
+    </div>
+
+    <script>
+        // Extract query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+
+        const fullName = urlParams.get('fullName');
+        const email = urlParams.get('email');
+        const phone = urlParams.get('phone');
+        const from = urlParams.get('from');
+        const destination = urlParams.get('destination');
+        const travelDate = urlParams.get('travelDate');
+        const numTravelers = urlParams.get('numTravelers');
+        const specialRequests = urlParams.get('specialRequests');
+
+        // Get the output element
+        const output = document.getElementById('output');
+
+        // Display the submitted information
+        output.innerHTML = `
+            <h2>Booking Successful!</h2>
+            <p><strong>Full Name:</strong> ${fullName}</p>
+            <p><strong>Email Address:</strong> ${email}</p>
+            <p><strong>Phone Number:</strong> ${phone}</p>
+            <p><strong>From:</strong> ${from}</p>
+            <p><strong>Destination:</strong> ${destination}</p>
+            <p><strong>Travel Date:</strong> ${travelDate}</p>
+            <p><strong>Number of Travelers:</strong> ${numTravelers}</p>
+            <p><strong>Special Requests/Additional Info:</strong> ${specialRequests || 'N/A'}</p>
+        `;
+    </script>
+
+</body>
+</html>
